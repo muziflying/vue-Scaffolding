@@ -1,0 +1,936 @@
+@import 'util.scss';
+
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    color:#333;
+    font-size:0.42667rem;
+}
+#app{
+    height:100%;
+    width:10rem;
+    background: #E1E1E1;
+}
+.container{
+    height: 100%;
+    width: 10rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {display:none}
+}
+.header{
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    // height: 2.66667rem;
+    width: 10rem;
+    .mainHeader{
+        height: 2.66667rem;
+        width: 10rem;
+        background: url('../img/back1.png') no-repeat;
+        background-size: cover;
+    }
+        
+}
+.nav{
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    // 
+    width: 10rem;
+    //首页 视频 段子 发现 专栏 的路由
+    .mainNav{
+        background: #FFB000;
+        width: 10rem;
+        height:1.06667rem;
+        @include flexBox;
+        li{
+            flex:1 1 auto;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 1.06667rem;
+            }
+        }
+    }
+}
+.footer{
+    width: 10rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+
+}
+.mint-toast{
+    width:2rem;
+    height:0.8rem;
+    background: rgba(254, 211, 63,.8);
+    .mint-toast-text{
+        color: white;
+        font-size: 0.5rem;
+    }
+}
+
+// .stainToast1{
+//     background: rgba(254, 211, 63,.5)
+// }
+// .stainToast2{
+//     background: rgba(254, 211, 63,.5)
+// }
+.homeContent{
+    width: 10rem;
+    height:100%;
+    background: #E1E1E1;
+}
+.homeBanner{
+    height:4.32rem;
+    width: 10rem;
+    .HomeLunbo{
+        height:4.32rem;
+        width: 10rem;
+        .homeLunbo1{
+            a{
+                display: block;
+                width: 10rem;
+                height:100%;
+                position: relative;
+                img{
+                    width: 10rem;
+                    height:4.32rem;
+                }
+                span{
+                    width:10rem;
+                    height:1.0667rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: rgba(0,0,0,.4);
+                    color: white;
+                    font-size: 0.37333rem;
+                }
+            }
+        }
+        .mint-swipe-indicators{
+            width: 1rem;
+            height:0.6rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            bottom: 5px;
+            .mint-swipe-indicator{
+                width: 0.12rem;
+                height:0.12rem;
+                background: white;
+                opacity: 1;
+            }
+            .is-active{
+                background: #FFB000;
+                opacity: 1;
+            }
+        }
+    }
+}
+.homeMain{
+    width: 10rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    padding-top: 0.25rem;
+}
+.homeStainList{
+    width:9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    margin: 0.25rem auto;
+}
+.homeStainItem{
+    width:9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    
+    background: white;
+    margin-bottom: 0.25rem;
+}
+.homeSLUser{
+    height:0.8rem;
+    width:8.53333rem;
+    padding: 0.42667rem 0.48rem;
+    p{
+        width: 0.8rem;
+        height:0.8rem;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        float: left;
+        img{
+            width:0.8rem;
+            height: 0.8rem;
+        }
+    }
+    a{
+        float: left;
+        height: 0.8rem;
+        width:6.4rem;
+        line-height: 0.8rem;
+        font-size: 0.37333rem;
+        margin-left: 0.26667rem;
+        color:#666;
+    }
+    span{
+        float: left;
+        height: 0.4rem;
+        width: 0.8rem;
+        color:#999;
+        border:1px solid #999;
+        font-size: 0.32rem;
+        text-align: center;
+        line-height: 0.4rem;
+    }
+}
+
+.homeSLCont2{
+    display: block;
+    width: 9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    p{
+        padding: 0 0.48rem 0.2rem;
+        font-size: 0.4rem;
+        line-height: 0.7rem; 
+    }
+    .homeItemImg{
+        width: 9.5rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        position: relative;
+        img{
+            width: 9.5rem;
+        }
+        span{
+            display: block;;
+            width: 1.2rem;
+            height:1.2rem;
+            position: absolute;
+            left: 0;
+            top:0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -4rem -3.33333rem;
+        }
+    }
+    .homeItemCom{
+        margin:0.26667rem auto;
+        background:#EAEAEA;
+        border-radius: 0.15rem;
+        width:8.4rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        padding: 0.1rem 0.3rem;
+        div{
+            width:8.4rem;
+            height:0.66667rem;
+
+            span{
+                float: left;
+                height:0.66667rem;
+                width: 1.17333rem;
+                background: url('./../img/26.png') no-repeat;
+                background-size: 6.66667rem 6.33333rem;
+                background-position: -5.33333rem -1.33333rem;
+            }
+            i{
+                float:left;
+                width:6rem;
+                height:0.66667rem;
+                color:#DE5025;
+                line-height: 0.66667rem;
+                font-size: 0.36rem;
+            }
+            strong{
+                float: right;
+                height:0.66667rem;
+                width: 1.17333rem;
+                font-size: 0.36rem;
+                padding-top:0.1rem; 
+                em{
+                    display: inline-block;
+                    width:0.4rem;
+                    height:0.4rem;
+                    background: url('./../img/26.png') no-repeat;
+                    background-size: 6.66667rem 6.33333rem;
+                    background-position: -5.33333rem -4.66667rem;
+                }
+            }
+        }
+        h6{
+            width:8.4rem;
+            line-height: 0.56667rem;
+            font-size: 0.36rem;
+            margin-top:0.2rem;
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+.homeSLComment{
+    height:0.6rem;
+    width: 8.5rem;
+    border-top:1px solid #999;
+    padding: 0.3rem 0.5rem 0;
+    line-height: 0.6rem;
+    font-size: 0.32rem;
+    i{
+        float: left;
+        height:0.6rem;
+        width: 0.6rem;
+        background: url('./../img/26.png') no-repeat;
+        background-size: 6.66667rem 6.33333rem;
+        background-position: -0.66667rem -2.66667rem;
+        margin-right: 0.2rem;
+    }
+    em{
+        
+        float: left;;
+        height:0.6rem;
+        width:0.8rem;
+        border-right: 1px solid #999;
+    }
+    b{
+        float: left;;
+        height:0.6rem;
+        width: 0.6rem;
+        background: url('./../img/26.png') no-repeat;
+        background-size: 6.66667rem 6.33333rem;
+        background-position: -2rem -2.66667rem;
+        margin: 0 0.2rem;
+    }
+    strong{
+        font-size: 0.32rem;
+        float: left;;
+        height:0.8rem;
+        width:0.8rem;
+    }
+    a{
+        float: right;
+        width:1.7rem;
+        height:0.6rem;
+        line-height: 0.5rem;
+        span{
+            display: inline-block;
+            height:0.6rem;
+            width: 0.6rem;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -5.33333rem -2.66667rem;
+            margin: 0 0.2rem;
+            vertical-align: top;
+        }
+
+    }
+}
+//段子页
+.stainContent{
+    width: 10rem;
+    height:100%;
+    background: #E1E1E1;
+}
+.stainMain{
+    width: 10rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    padding-top: 0.25rem;
+}
+.stainStainList{
+    width:9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    margin: 0.25rem auto;
+}
+.stainStainItem{
+    width:9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    
+    background: white;
+    margin-bottom: 0.25rem;
+}
+.stainSLUser{
+    height:0.8rem;
+    width:8.53333rem;
+    padding: 0.42667rem 0.48rem;
+    p{
+        width: 0.8rem;
+        height:0.8rem;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        float: left;
+        img{
+            width:0.8rem;
+            height: 0.8rem;
+        }
+    }
+    a{
+        float: left;
+        height: 0.8rem;
+        width:6.4rem;
+        line-height: 0.8rem;
+        font-size: 0.37333rem;
+        margin-left: 0.26667rem;
+        color:#666;
+    }
+    span{
+        float: left;
+        height: 0.4rem;
+        width: 0.8rem;
+        color:#999;
+        border:1px solid #999;
+        font-size: 0.32rem;
+        text-align: center;
+        line-height: 0.4rem;
+    }
+}
+
+.stainSLCont2{
+    display: block;
+    width: 9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    p{
+        padding: 0 0.48rem 0.2rem;
+        font-size: 0.36rem;
+        line-height: 0.7rem; 
+        color:#333;
+    }
+    .stainItemImg{
+        width: 9.5rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        position: relative;
+        img{
+            width: 9.5rem;
+        }
+        span{
+            display: block;;
+            width: 1.2rem;
+            height:1.2rem;
+            position: absolute;
+            left: 0;
+            top:0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -4rem -3.33333rem;
+        }
+    }
+    .stainItemCom{
+        margin:0.26667rem auto;
+        background:#EAEAEA;
+        border-radius: 0.15rem;
+        width:8.4rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        padding: 0.1rem 0.3rem;
+        div{
+            width:8.4rem;
+            height:0.66667rem;
+
+            span{
+                float: left;
+                height:0.66667rem;
+                width: 1.17333rem;
+                background: url('./../img/26.png') no-repeat;
+                background-size: 6.66667rem 6.33333rem;
+                background-position: -5.33333rem -1.33333rem;
+            }
+            i{
+                float:left;
+                width:6rem;
+                height:0.66667rem;
+                color:#DE5025;
+                line-height: 0.66667rem;
+                font-size: 0.36rem;
+            }
+            strong{
+                float: right;
+                height:0.66667rem;
+                width: 1.17333rem;
+                font-size: 0.36rem;
+                em{
+                    display: inline-block;
+                    width:0.4rem;
+                    height:0.4rem;
+                    background: url('./../img/26.png') no-repeat;
+                    background-size: 6.66667rem 6.33333rem;
+                    background-position: -5.33333rem -4.66667rem;
+                }
+            }
+        }
+        h6{
+            width:8.4rem;
+            line-height: 0.56667rem;
+            font-size: 0.36rem;
+            margin-top:0.2rem;
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+.stainSLComment{
+    height:0.6rem;
+    width: 8.5rem;
+    border-top:1px solid #999;
+    padding: 0.3rem 0.5rem 0;
+    line-height: 0.5rem;
+    font-size: 0.32rem;
+    i{
+        float: left;
+        height:0.6rem;
+        width: 0.6rem;
+        background: url('./../img/26.png') no-repeat;
+        background-size: 6.66667rem 6.33333rem;
+        background-position: -0.66667rem -2.66667rem;
+        margin-right: 0.2rem;
+    }
+    em{
+        
+        float: left;;
+        height:0.6rem;
+        width:0.8rem;
+        border-right: 1px solid #999;
+    }
+    b{
+        float: left;;
+        height:0.6rem;
+        width: 0.6rem;
+        background: url('./../img/26.png') no-repeat;
+        background-size: 6.66667rem 6.33333rem;
+        background-position: -2rem -2.66667rem;
+        margin: 0 0.2rem;
+    }
+    strong{
+        font-size: 0.32rem;
+        float: left;;
+        height:0.8rem;
+        width:0.8rem;
+        line-height: 0.6rem;
+    }
+    a{
+        float: right;
+        width:1.7rem;
+        height:0.6rem;
+
+        span{
+            display: inline-block;
+            height:0.6rem;
+            width: 0.6rem;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -5.33333rem -2.66667rem;
+            margin: 0 0.2rem;
+            vertical-align: top;
+        }
+
+    }
+}
+
+
+.DetailHeader{
+    width:10rem;
+    height:1.33333rem;
+    background: url(http://qiqu-img.uc.cn/qiqu/img/buz/ico/detailBg1.png) no-repeat;
+    background-size: cover;
+    position: fixed;
+    top:0;
+    left: 0;
+    button{
+        background: rgba(0,0,0,0);
+        width:1.33333rem;
+        height:1.33333rem;
+        font-size: 0.7rem;
+        color:white;
+        position:absolute;
+        left: 0;
+        top:0;
+        border:none;
+    }
+    h2{
+        width: 10rem;
+        height: 1.33333rem;
+        line-height: 1.33333rem;
+        text-align: center;
+        font-size: 0.55rem;
+    }
+}
+.DetailNav{
+    width:10rem;
+    height:0;
+}
+.detailContent{
+    width:9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    margin:1.6rem 0.25rem 0.25rem;
+    
+}
+.detailItem{
+    width:9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    background: white;
+}
+.detailSLUser{
+    height:0.8rem;
+    width:8.53333rem;
+    padding: 0.42667rem 0.48rem;
+    p{
+        width: 0.8rem;
+        height:0.8rem;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        float: left;
+        img{
+            width:0.8rem;
+            height: 0.8rem;
+        }
+    }
+    a{
+        float: left;
+        height: 0.8rem;
+        width:6.4rem;
+        line-height: 0.8rem;
+        font-size: 0.37333rem;
+        margin-left: 0.26667rem;
+        color:#666;
+    }
+    span{
+        float: left;
+        height: 0.4rem;
+        width: 0.8rem;
+        color:#999;
+        border:1px solid #999;
+        font-size: 0.32rem;
+        text-align: center;
+        line-height: 0.4rem;
+    }
+}
+
+.detailSLCont{
+    display: block;
+    width: 8.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    padding: 0 0.5rem 0.2rem;
+    font-size: 0.36rem;
+    line-height: 0.5rem; 
+    color:#333;
+    
+    // .detailItemImg{
+    //     width: 9.5rem;
+    //     height: auto!important;min-height:0rem;height:0rem;
+    //     &:after{
+    //         content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    //     }
+    //     position: relative;
+    //     img{
+    //         width: 9.5rem;
+    //     }
+    //     span{
+    //         display: block;;
+    //         width: 1.2rem;
+    //         height:1.2rem;
+    //         position: absolute;
+    //         left: 0;
+    //         top:0;
+    //         right: 0;
+    //         bottom: 0;
+    //         margin: auto;
+    //         background: url('./../img/26.png') no-repeat;
+    //         background-size: 6.66667rem 6.33333rem;
+    //         background-position: -4rem -3.33333rem;
+    //     }
+    // }
+    
+}
+.detailSLCont2{
+    display: block;
+    width: 9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    
+    p{
+        width: 9.5rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        padding: 0 0.5rem 0.2rem;
+        font-size: 0.36rem;
+        line-height: 0.5rem; 
+        color:#333;
+    }
+    div{
+        width: 9.5rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        img{
+            width:9.5rem;
+        }
+    }
+}
+.detailSLComment{
+    height:0.6rem;
+    width: 8.5rem;
+    border-top:1px solid #999;
+    margin-top:0.2rem;
+    padding: 0.25rem 0.5rem 0;
+    line-height: 0.6rem;
+    font-size: 0.32rem;
+    i{
+        float: left;
+        height:0.6rem;
+        width: 0.6rem;
+        background: url('./../img/26.png') no-repeat;
+        background-size: 6.66667rem 6.33333rem;
+        background-position: -0.66667rem -2.66667rem;
+        margin-right: 0.2rem;
+    }
+    em{
+        
+        float: left;;
+        height:0.6rem;
+        width:0.8rem;
+        border-right: 1px solid #999;
+    }
+    b{
+        float: left;;
+        height:0.6rem;
+        width: 0.6rem;
+        background: url('./../img/26.png') no-repeat;
+        background-size: 6.66667rem 6.33333rem;
+        background-position: -2rem -2.66667rem;
+        margin: 0 0.2rem;
+    }
+    strong{
+        font-size: 0.32rem;
+        float: left;;
+        height:1rem;
+        width:0.8rem;
+    }
+    a{
+        float: right;
+        width:1.7rem;
+        height:0.6rem;
+
+        span{
+            display: inline-block;
+            height:0.6rem;
+            width: 0.6rem;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -5.33333rem -2.66667rem;
+            margin: 0 0.2rem;
+            vertical-align: top;
+        }
+
+    }
+}
+.detailHotComment{
+    margin:0.26667rem auto;
+    background:#EAEAEA;
+    border-radius: 0.15rem;
+    width:8.4rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    padding: 0.1rem 0.3rem;
+    div{
+        width:8.4rem;
+        height:0.66667rem;
+        span{
+            float: left;
+            height:0.66667rem;
+            width: 1.17333rem;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -5.33333rem -1.33333rem;
+        }
+        i{
+            float:left;
+            width:6rem;
+            height:0.66667rem;
+            color:#DE5025;
+            line-height: 0.66667rem;
+            font-size: 0.36rem;
+        }
+        strong{
+            float: right;
+            height:0.66667rem;
+            width: 1.17333rem;
+            font-size: 0.36rem;
+            em{
+                display: inline-block;
+                width:0.4rem;
+                height:0.4rem;
+                background: url('./../img/26.png') no-repeat;
+                background-size: 6.66667rem 6.33333rem;
+                background-position: -5.33333rem -4.66667rem;
+            }
+        }
+    }
+    p{
+        width:8.4rem;
+        line-height: 0.56667rem;
+        font-size: 0.36rem;
+        margin-top:0.2rem;
+        margin-bottom: 0.3rem;
+    }
+}
+
+.detailComments{
+    width: 9.5rem;
+    height: auto!important;min-height:0rem;height:0rem;
+    &:after{
+        content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+    }
+    background: white;
+    .commentsList{
+        width: 8rem;
+        padding:0.1rem 0.35rem; 
+        height: 0.64rem;
+        line-height: 0.6rem;
+        font-size: 0.4rem;
+        span{
+            display: inline-block;
+            width:1.17333rem;
+            height: 0.64rem;
+            vertical-align: top;
+            background: url('./../img/26.png') no-repeat;
+            background-size: 6.66667rem 6.33333rem;
+            background-position: -5.33333rem -2.02667rem;
+        }
+    }
+    li{
+        width:9rem;
+        padding: 0.25rem;
+        height: auto!important;min-height:0rem;height:0rem;
+        &:after{
+            content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+        }
+        border-bottom: 1px solid #999;
+        .commentUser{
+            width: 0.8rem;
+            height:1rem;
+            float: left;
+            margin-right: 0.2rem;
+            img{
+                width: 0.8rem;
+                height:0.8rem;
+                border-radius: 0.4rem;
+                overflow: hidden;
+            }
+        }
+        div{
+            width:8rem;
+            height: auto!important;min-height:0rem;height:0rem;
+            &:after{
+                content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+            }
+            float: left;
+            div{
+                width:8rem;
+                height:0.8rem;
+                font-size: 0.3rem;
+                line-height: 0.8rem;
+                color:black;
+                span{
+                    float: right;
+                    height:0.66667rem;
+                    width: 1.17333rem;
+                    font-size: 0.36rem;
+                    i{
+                        display: inline-block;
+                        width:0.4rem;
+                        height:0.4rem;
+                        background: url('./../img/26.png') no-repeat;
+                        background-size: 6.66667rem 6.33333rem;
+                        background-position: -5.33333rem -4.66667rem;
+                    }
+                }
+            }
+            p{
+               width: 8rem;
+               height: auto!important;min-height:0rem;height:0rem;
+                &:after{
+                    content: '.';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;
+                }
+               line-height: 0.6rem;
+               font-size: 0.32rem; 
+            }
+        }
+    }
+}
+.detailBtnList{
+    width: 9.5rem;
+    height:1.33333rem;
+    margin:0.25rem 0;
+    button{
+        height:1.33333rem;
+        border-radius: 0.2rem;
+        color:white;
+        font-size: 0.55rem;
+        border:none;
+        outline: none;
+    }
+    img{
+        height:1.33333rem;
+        margin-left: 1rem;
+    }
+    .detailNextBtn{
+        float: right;
+        background: #F8A514;
+        width: 5.8rem;
+    }
+
+}
